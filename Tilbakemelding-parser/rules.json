@@ -1,0 +1,36 @@
+﻿[
+  {
+    "Column": "K",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "[1]"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "[2-4]"
+      },
+      {
+        "Color": "red",
+        "Regexp": "[5]"
+      }
+    ]
+  },
+  {
+    "Column": "O",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  }
+]
