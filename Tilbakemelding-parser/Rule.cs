@@ -9,6 +9,8 @@ namespace Tilbakemelding_parser
         public string Column { get; set; }
         public List<Dictionary<string, string>> Rules { get; set; }
 
+        public string RefColumn { get; set; }
+
         public Rule()
         {
             Column = "";

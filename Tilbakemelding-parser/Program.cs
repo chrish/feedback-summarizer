@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using System;
 
 namespace Tilbakemelding_parser
 {
@@ -23,6 +24,16 @@ namespace Tilbakemelding_parser
             Parser p = new Parser("rules.json", wbm);
 
             int numRows = wbm.GetNumberOfRows();
+
+            // Setter opp headings for sammendrag:
+            Row headerRow = wbm.GetRow(1);
+
+            Cell grCell = new Cell() { CellReference = "CC1", DataType = CellValues.String, CellValue = new CellValue("Antall grønne") };
+            Cell ylCell = new Cell() { CellReference = "CD1", DataType = CellValues.String, CellValue = new CellValue("Antall gule") };
+            Cell rdCell = new Cell() { CellReference = "CE1", DataType = CellValues.String, CellValue = new CellValue("Antall røde") };
+            Cell fnlCell = new Cell() { CellReference = "CF1", DataType = CellValues.String, CellValue = new CellValue("Endelig score") };
+
+            headerRow.Append(grCell, ylCell, rdCell, fnlCell);
 
             for (int i = 2; i < numRows; i++)
             {

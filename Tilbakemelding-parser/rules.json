@@ -32,5 +32,1038 @@
         "Regexp": ".+"
       }
     ]
+  },
+  {
+    "Column": "Q",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "R",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde|3djepart"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "S",
+    "RefColumn": "O",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde|3djepart",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Kunde|Bouvet",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "T",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde|3djepart"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "U",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde|3djepart"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "V",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde|3djepart"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "W",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde|3djepart"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "X",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde|3djepart"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "Y",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Kunde|3djepart"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Delt\\ ansvar|Bouvet"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "Z",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Nei"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "AA",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AB",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja|N/A"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AD",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "3"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "2"
+      },
+      {
+        "Color": "red",
+        "Regexp": "1"
+      }
+    ]
+  },
+  {
+    "Column": "AE",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AF",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AG",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AI",
+    "RefColumn": "AE",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": ".+",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "AJ",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "AL",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "AN",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AP",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "AQ",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke|Nei"
+      }
+    ]
+  },
+  {
+    "Column": "AR",
+    "RefColumn": "AE",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja.+revidert.+",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+opp\\ til\\ prosjekt.+"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AS",
+    "Rules": [
+      {
+        "Color": "yellow",
+        "Regexp": "Lovpålagte.+|Strenge.+"
+      }
+    ]
+  },
+  {
+    "Column": "AT",
+    "Rules": [
+      {
+        "Color": "yellow",
+        "Regexp": "Lovpålagte.+|Strenge.+"
+      }
+    ]
+  },
+  {
+    "Column": "AV",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AU",
+    "RefColumn": "AV",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Nei"
+      },
+      {
+        "Color": "green",
+        "Regexp": "Ja",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AW",
+    "Rules": [
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AX",
+    "Rules": [
+      {
+        "Color": "yellow",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "AY",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "AZ",
+    "Rules": [
+      {
+        "Color": "yellow",
+        "Regexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      },
+      {
+        "Color": "green",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "BA",
+    "RefColumn": "BF",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Nei",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "BB",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ingen|Få\\ /\\ lite\\ alvorlig"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Flere.+"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Kritisk\\ risikobilde"
+      }
+    ]
+  },
+  {
+    "Column": "BC",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ingen|Få\\ /\\ lite\\ alvorlig"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Flere.+"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Kritisk\\ risikobilde"
+      }
+    ]
+  },
+  {
+    "Column": "BD",
+    "RefColumn": "O",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke",
+        "RefRegexp": "Nei|Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "BE",
+    "RefColumn": "BD",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "BG",
+    "Rules": [
+      {
+        "Color": "yellow",
+        "Regexp": ".+Egenutviklet.+"
+      }
+    ]
+  },
+  {
+    "Column": "BH",
+    "RefColumn": "BF",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Nei|Vet\\ ikke",
+        "RefRegexp": "Nei"
+      }
+    ]
+  },
+  {
+    "Column": "BI",
+    "RefColumn": "BF",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Nei|Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "BJ",
+    "RefColumn": "BF",
+    "Rules": [
+      {
+        "Color": "green|Ikke\\ aktuelt",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Nei|Vet\\ ikke",
+        "RefRegexp": "Nei"
+      }
+    ]
+  },
+  {
+    "Column": "BK",
+    "RefColumn": "BF",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Nei|Vet\\ ikke",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Ikke\\ aktuelt",
+        "RefRegexp": "Ja"
+      }
+    ]
+  },
+  {
+    "Column": "BL",
+    "RefColumn": "BF",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja|Ikke\\ aktuelt"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Nei|Vet\\ ikke",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke",
+        "RefRegexp": "Ja"
+      }
+    ]
+  },
+  {
+    "Column": "BM",
+    "RefColumn": "BI",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ delvis",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Stemmer\\ delvis",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke|Stemmer\\ mindre\\ bra"
+      }
+    ]
+  },
+  {
+    "Column": "BN",
+    "RefColumn": "BI",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ delvis",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Stemmer\\ delvis",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke|Stemmer\\ mindre\\ bra"
+      }
+    ]
+  },
+  {
+    "Column": "BO",
+    "RefColumn": "BI",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ delvis",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Stemmer\\ delvis",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke|Stemmer\\ mindre\\ bra"
+      }
+    ]
+  },
+  {
+    "Column": "BP",
+    "RefColumn": "BI",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Ja",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke|Nei"
+      }
+    ]
+  },
+  {
+    "Column": "BQ",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Jevnlig|Planlagt|Kunde|Ikke\\ aktuelt"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Ved\\ behov"
+      },
+      {
+        "Color": "red",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "BR",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Jevnlig|Planlagt|Kunde|Ikke\\ aktuelt"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Ved\\ behov"
+      },
+      {
+        "Color": "red",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "BS",
+    "RefColumn": "BI",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Jevnlig|Planlagt|Kunde|Ikke\\ aktuelt",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Jevnlig|Planlagt|Kunde|Ikke\\ aktuelt",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Ved\\ behov",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "BT",
+    "RefColumn": "O",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ja",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Nei|Vet\\ ikke"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
+  },
+  {
+    "Column": "BU",
+    "RefColumn": "BT",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Bouvet.+|Kunde.+|Tredjepart.+",
+        "RefRegexp": "Ja"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Kunde.+|Tredjepart.+"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Bouvet.+",
+        "RefRegexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Bouvet.+",
+        "RefRegexp": "Vet\\ ikke"
+      },
+      {
+        "Color": "red",
+        "Regexp": ".+ikke\\ avklart"
+      }
+    ]
+  },
+  {
+    "Column": "BV",
+    "RefColumn": "BU",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Stemmer\\ bra|Stemmer\\ veldig\\ bra"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Stemmer\\ mindre\\ bra",
+        "RefRegexp": "Bouvet.+"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ mindre\\ bra"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "BW",
+    "RefColumn": "BU",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Stemmer\\ veldig\\ bra"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Bouvet.+"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Stemmer\\ mindre\\ bra",
+        "RefRegexp": "Bouvet.+"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ mindre\\ bra"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "BX",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Stemmer\\ bra|Stemmer\\ veldig\\ bra"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ mindre\\ bra"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "BY",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Ikke\\ aktuelt|Stemmer\\ bra|Stemmer\\ veldig\\ bra"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "Stemmer\\ mindre\\ bra"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Vet\\ ikke"
+      }
+    ]
+  },
+  {
+    "Column": "CA",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "5"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": "[3-4]"
+      },
+      {
+        "Color": "red",
+        "Regexp": "[1-2]"
+      }
+    ]
+  },
+  {
+    "Column": "CB",
+    "Rules": [
+      {
+        "Color": "green",
+        "Regexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Ja.+"
+      },
+      {
+        "Color": "yellow",
+        "Regexp": ".+"
+      }
+    ]
   }
 ]

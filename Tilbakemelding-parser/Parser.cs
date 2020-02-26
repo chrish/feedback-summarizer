@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -44,29 +43,39 @@ namespace Tilbakemelding_parser
                 // Se på regelen og hent cella vi vil jobbe mot. 
                 Cell cell = (from Cell c in rowToParse.Elements<Cell>() where rxCol.IsMatch(c.CellReference) select c).Single<Cell>();
 
-                for (int i=0; i<r.Rules.Count; i++) {
+                for (int i = 0; i < r.Rules.Count; i++) {
                     // sjekk om vi har en regel som matcher. Første vinner. Dersom mer enn en treffer flagger vi cella med grått. 
-                    var rxCellVal = new Regex(r.Rules[i]["Regexp"], RegexOptions.IgnoreCase);
-
-                    //Todo: Cell Datatype null for kol K (tall)
-                    //           Datatype s for kol O, denne linker til SharedStringTable. 
-                    // Må lage en if som ser på datatype, dersom null brukes innhold direkte, 
-                    // dersom s må WorkBookManager inneholde en metode som går mot stringtablen 
-                    // og henter stringen for et gitt innhold. 
-
-                    // Dersom treff går vi ut av løkka, slik at vi kan ha catch-all regler.
-                    var cellValue = "";
-
-                    if (cell.DataType != null && cell.DataType == "s") 
-                    {
-                        var dt = cell.DataType;
-                        cellValue = Wbm.GetStringFromSharedStringTable(Convert.ToInt32(cell.CellValue.Text));
-                    }
-                    else {
-                        cellValue = cell.CellValue.Text;
-                    }
+                    Regex rxCellVal = new Regex(r.Rules[i]["Regexp"], RegexOptions.IgnoreCase);
+                    Regex refRxCellVal;
+                    var cellValue = GetCellValue(cell);
+                    var refCellValue = "";
                     
-                    if (rxCellVal.IsMatch(cellValue)) {
+                    Cell refCell;
+
+                    // Resultatet av innholdet i en celle kan vektes mot en annen:
+                    if (r.RefColumn != null) {
+                        int rowIdx = Convert.ToInt32((uint)rowToParse.RowIndex);
+                        string refCellRef = r.RefColumn + rowIdx;
+
+                        refCell = (from Cell c in rowToParse.Elements<Cell>() where c.CellReference.Equals(refCellRef) select c).Single<Cell>();
+                        refCellValue = GetCellValue(refCell);
+                    }
+
+                    // Sjekk om regelen har en refregexp:
+                    if (r.Rules[i].ContainsKey("RefRegexp"))
+                    {
+                        refRxCellVal = new Regex(r.Rules[i]["RefRegexp"], RegexOptions.IgnoreCase);
+                        // Sjekk om vi har treff mot refcella
+                        if (rxCellVal.IsMatch(cellValue) && refRxCellVal.IsMatch(refCellValue))
+                        {
+                            flags.Add(cell.CellReference, r.Rules[i]["Color"]);
+                            // Dersom treff går vi ut av løkka, slik at vi kan ha catch-all regler.
+                            break;
+                        }
+                    }
+                    else if (rxCellVal.IsMatch(cellValue))
+                    {
+                        // Ingen refcelle, kjør vanlig compare
                         flags.Add(cell.CellReference, r.Rules[i]["Color"]);
                         break;
                     }
@@ -80,7 +89,61 @@ namespace Tilbakemelding_parser
                 
             }
 
+            // Legg til kolonner her.
+            int numGr = (from KeyValuePair<string, string> f in flags where f.Value.Equals("green") select f).Count();
+            int numYl = (from KeyValuePair<string, string> f in flags where f.Value.Equals("yellow") select f).Count();
+            int numRd = (from KeyValuePair<string, string> f in flags where f.Value.Equals("red") select f).Count();
+
+            // CC, CD, CE, CF for totalt antall grønn, gul og rød, samt en total score
+            Cell grCell = new Cell() { CellReference = "CC" + rowToParse.RowIndex, DataType = CellValues.String, CellValue = new CellValue(numGr.ToString()) };
+            Cell ylCell = new Cell() { CellReference = "CD" + rowToParse.RowIndex, DataType = CellValues.String, CellValue = new CellValue(numYl.ToString()) };
+            Cell rdCell = new Cell() { CellReference = "CE" + rowToParse.RowIndex, DataType = CellValues.String, CellValue = new CellValue(numRd.ToString()) };
+
+            grCell.StyleIndex = Convert.ToUInt32(WorkbookManager.MapStyleIdx("green"));
+            ylCell.StyleIndex = Convert.ToUInt32(WorkbookManager.MapStyleIdx("yellow"));
+            rdCell.StyleIndex = Convert.ToUInt32(WorkbookManager.MapStyleIdx("red"));
+
+            rowToParse.Append(grCell, ylCell, rdCell);
+
+            // Så må vi tenke litt... Hva er fornuftige grenser for endelig score? 
+            // Flere grønne enn gule+røde => grønn
+            // Flere grønne+gule enn røde => gul, eller røde+gule enn grønne => gul
+            // Flere røde enn grønne+gule => rød
+            var finalScore = "red";
+            if (numGr > numYl + numRd) finalScore = "green";
+            else if (numGr + numYl >= numRd || numGr <= numYl + numRd) finalScore = "yellow";
+            else if (numGr + numYl <= numRd) finalScore = "red";
+
+            Cell fnlCell = new Cell() { CellReference = "CF" + rowToParse.RowIndex, DataType = CellValues.String, CellValue = new CellValue("") };
+            fnlCell.StyleIndex = Convert.ToUInt32(WorkbookManager.MapStyleIdx(finalScore));
+            rowToParse.Append(fnlCell);
+
             return rowToParse;
+        }
+
+        /// <summary>
+        /// Hjelpemetode for å hente en celleverdi
+        /// </summary>
+        /// <param name="cell"></param>
+        /// <returns></returns>
+        protected string GetCellValue(Cell cell) {
+            var cellValue = "";
+            
+            if (cell.DataType != null && cell.DataType == "s")
+            {
+                var dt = cell.DataType;
+                cellValue = Wbm.GetStringFromSharedStringTable(Convert.ToInt32(cell.CellValue.Text));
+            }
+            else if (cell.CellValue != null)
+            {
+                cellValue = cell.CellValue.Text;
+            }
+            else
+            {
+                cellValue = string.Empty;
+            }
+
+            return cellValue;
         }
     }
 }
