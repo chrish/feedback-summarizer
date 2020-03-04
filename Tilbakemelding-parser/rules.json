@@ -636,7 +636,7 @@
       },
       {
         "Color": "red",
-        "Regexp": "Nei",
+        "Regexp": "Nei|Vet\\ ikke",
         "RefRegexp": "Ja"
       },
       {
@@ -652,11 +652,11 @@
     "Rules": [
       {
         "Color": "green",
-        "Regexp": "Ja"
+        "Regexp": "Ja|Ikke\\ aktuelt"
       },
       {
         "Color": "red",
-        "Regexp": "Nei",
+        "Regexp": "Nei|Vet\\ ikke",
         "RefRegexp": "Ja"
       },
       {
@@ -670,8 +670,8 @@
     "RefColumn": "BF",
     "Rules": [
       {
-        "Color": "green|Ikke\\ aktuelt",
-        "Regexp": "Ja"
+        "Color": "green",
+        "Regexp": "Ja|Ikke\\ aktuelt"
       },
       {
         "Color": "red",
@@ -745,6 +745,11 @@
         "RefRegexp": "Nei"
       },
       {
+        "Color": "red",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Vet\\ ikke"
+      },
+      {
         "Color": "yellow",
         "Regexp": "Stemmer\\ delvis",
         "RefRegexp": "Ja"
@@ -775,6 +780,11 @@
         "RefRegexp": "Nei"
       },
       {
+        "Color": "red",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Vet\\ ikke"
+      },
+      {
         "Color": "yellow",
         "Regexp": "Stemmer\\ delvis",
         "RefRegexp": "Ja"
@@ -803,6 +813,11 @@
         "Color": "yellow",
         "Regexp": "Stemmer\\ bra",
         "RefRegexp": "Nei"
+      },
+      {
+        "Color": "red",
+        "Regexp": "Stemmer\\ bra",
+        "RefRegexp": "Vet\\ ikke"
       },
       {
         "Color": "yellow",
@@ -976,7 +991,7 @@
     "Rules": [
       {
         "Color": "green",
-        "Regexp": "Ikke\\ aktuelt|Stemmer\\ veldig\\ bra"
+        "Regexp": "Ikke\\ aktuelt|Stemmer\\ bra|Stemmer\\ veldig\\ bra"
       },
       {
         "Color": "yellow",
